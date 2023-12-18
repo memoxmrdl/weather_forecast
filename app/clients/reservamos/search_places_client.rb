@@ -13,7 +13,7 @@ module Reservamos
     private
 
     def query_params
-      { q: @params.fetch(:city, '') }
+      { q: @params.fetch(:q, '') }
     end
 
     def presenter_class

@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
 class PlacesWithWeatherForecastUseCase < ApplicationUseCase
-  step :validate_city
+  step :validate_q
   step :search_places_from_reservamos
   step :places_with_weather_forecast
 
   private
 
-  def validate_city(city:)
-    if city.blank?
+  def validate_q(q:)
+    if q.blank?
       Failure([])
     else
-      Success(city:)
+      Success(q:)
     end
   end
 
-  def search_places_from_reservamos(city:)
-    places = Reservamos::SearchPlacesClient.new(resource: [], params: { city: }).list
+  def search_places_from_reservamos(q:)
+    places = Reservamos::SearchPlacesClient.new(resource: [], params: { q: }).list
 
     Success(places:)
   end

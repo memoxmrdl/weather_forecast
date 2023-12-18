@@ -4,7 +4,7 @@ class OpenWeatherMapRepository
   include HTTParty
 
   base_uri 'https://api.openweathermap.org'
-  default_params appid: 'a5a47c18197737e8eeca634cd6acb581',
+  default_params appid: ENV.fetch('OPEN_WEATHER_MAP_API_KEY', ''),
     exclude: 'minutely,hourly,current',
     units: 'metric',
     lang: 'es'

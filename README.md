@@ -32,5 +32,6 @@ el parametro `q` con el nombre parcial o total de un lugar, puede ser una ciudad
 
 Los resultados serán los mismos que Reservamos API devuelve pero con el pronostico del tiempo de los próximos 7 días de cada coincidencia encontrada.
 
-Nota: Si en los resultado obtenidos la key de `weather_forecast: []` por cada lugar regresa vacío, es posible que la API de Open Weather denege el servicio por
-el tipo de subscripción. En algún momento la API Key proporcionada daba resultados satisfactorios pero de último momento la API Key fue bloqueada por Open Weather.
+Nota: Si en los resultados obtenidos la key de `weather_forecast: []` por cada lugar regresa vacío, es posible que la API de Open Weather denege el servicio por
+el tipo de subscripción. En algún momento la API Key proporcionada daba resultados satisfactorios pero de último momento la API Key fue bloqueada por Open Weather, para
+una mejor experiencia de usuario cambiar la API Key de la variable de ambiente de `OPEN_WEATHER_MAP_API_KEY`, consultar en [Correr el servidor](https://github.com/memoxmrdl/weather_forecast/blob/main/README.md#correr-el-servidor) de este README.
